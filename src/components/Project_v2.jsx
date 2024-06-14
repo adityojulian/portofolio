@@ -74,7 +74,89 @@ export function ProjectV2() {
 								{filteredProjects.map((project, index) => (
 									<motion.div
 										key={index + project.title}
-										className="w-full lg:w-96 md:w-65 py-4 px-2 rounded-xl transform transition-all hover:-translate-y-2 hover:bg-slate-700/30 duration-300"
+										whileInView={{
+											backgroundColor: "rgb(51,65,85,0.3)",
+											y: -20,
+										}}
+										initial={{ y: 0 }}
+										transition={{ duration: 0.3 }}
+										className="lg:hidden w-full lg:w-96 md:w-65 py-4 px-2 rounded-xl transform transition-all lg:hover:-translate-y-2 lg:hover:bg-slate-700/30 duration-300"
+									>
+										<motion.div
+										// whileInView={{ opacity: 1, x: 0 }}
+										// initial={{ x: -20, opacity: 0 }}
+										// transition={{ duration: 1 }}
+										>
+											<img
+												className="rounded-2xl p-2"
+												src={project.image}
+												alt={project.title}
+											/>
+										</motion.div>
+										<motion.div
+											// whileInView={{ opacity: 1, x: 0 }}
+											// initial={{ x: 20, opacity: 0 }}
+											// transition={{ duration: 1 }}
+											className="p-2"
+										>
+											<h2 className="font-bold text-lg mb-2">
+												{project.title}
+											</h2>
+											<p className="text-sm mb-4 tracking-tighter font-light">
+												{project.description}
+											</p>
+											<div className="flex flex-wrap items-start gap-3">
+												{project.technologies.map((tech, index) => (
+													<span
+														key={index}
+														className="rounded-xl bg-blue-400/15 px-2 py-1 text-sm font-medium text-blue-400"
+													>
+														{tech}
+													</span>
+												))}
+											</div>
+										</motion.div>
+										<motion.div
+											// whileInView={{ opacity: 1, x: 0 }}
+											// initial={{ x: -20, opacity: 0 }}
+											// transition={{ duration: 1 }}
+											className="relative inline-flex group m-2"
+										>
+											{/* <div className="absolute transition-all duration-1000 opacity-70 -inset-px rounded-xl blur-lg filter group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200"></div> */}
+											<div className="flex flex-wrap gap-3 py-2">
+												{Object.entries(project.links).map(
+													([key, value], index) => {
+														// Check if the link is an external link
+														const isExternal = value.startsWith("http");
+														return isExternal ? (
+															<a
+																key={index}
+																href={value}
+																target="_blank"
+																rel="noopener noreferrer"
+																className="relative inline-flex items-center justify-center px-3 py-1 text-base font-bold text-white transition-all duration-200 bg-purple-800 border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-purple-600 rounded"
+															>
+																{key}
+															</a>
+														) : (
+															<Link
+																key={index}
+																to={value}
+																className="relative inline-flex items-center justify-center px-3 py-1 text-base font-bold text-white transition-all duration-200 bg-purple-800 border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-purple-600 rounded"
+															>
+																{key}
+															</Link>
+														);
+													}
+												)}
+											</div>
+										</motion.div>
+									</motion.div>
+								))}
+								{filteredProjects.map((project, index) => (
+									<motion.div
+										key={index + project.title}
+										className="hidden lg:block w-full lg:w-96 md:w-65 py-4 px-2 rounded-xl transform transition-all lg:hover:-translate-y-2 lg:hover:bg-slate-700/30 duration-300"
 									>
 										<motion.div
 										// whileInView={{ opacity: 1, x: 0 }}
