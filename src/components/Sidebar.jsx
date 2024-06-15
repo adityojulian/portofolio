@@ -21,7 +21,7 @@ const Sidebar = () => {
 			sections.forEach((section) => {
 				const sectionTop = section.offsetTop;
 				const sectionHeight = section.clientHeight;
-				if (window.scrollY >= sectionTop - sectionHeight / 4) {
+				if (window.scrollY >= sectionTop - sectionHeight / 5.5) {
 					currentSection = section.getAttribute("id");
 				}
 			});
