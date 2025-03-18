@@ -6,11 +6,11 @@ import receipify from "../assets/projects/receipify.png";
 import portofolio from "../assets/projects/portofolio.png";
 import irr from "../assets/projects/irr.png";
 
-export const HERO_CONTENT = `Experience seeker ready to pour time and passion within the IT industry with a solid five-year knowledge of computer science supported by outstanding organizational, leadership, project management, and software development abilities reflected by various leadership positions with a chairman of the computer science student association as one of them, along with diverse mobile and web application development, machine learning, and embedded systems projects. Currently pursuing a master's degree in Systems Engineering for the Internet of Things at the University College London.`;
+export const HERO_CONTENT = `A versatile MSc graduate in Systems Engineering for the Internet of Things from University College London (UCL), with a strong foundation in AI, machine learning, software engineering, and embedded systems, complemented by five years of computer science expertise. I have worked on deep reinforcement learning for precision irrigation, Aspect-Based Sentiment Analysis for reviews on e-commerce, and computer vision for rapid diagnostics, alongside extensive experience in full-stack development, and IoT integration. I have held key leadership roles, including Chairman of the Computer Science Student Association, where I honed my organizational and team leadership abilities. I am committed to building impactful, technology-driven solutions that bridge software, hardware, and AI.`;
 
 // export const ABOUT_TEXT_1 = `I've come to realize that learning is not just about acquiring new skills; it's also about shaping who I am. Learning new ideas, tools, mindsets, and subjects gives me the framework on how to think and express my insights based on different perspectives. This passion recently led me to an exciting project where I combined edge devices equipped with sensors and software techniques for the first time to develop a Smart Crash Cart for hospitals. This experience underscored for me how approaching problems from different perspectives can lead to novel solutions, deepening my eagerness to learn new things.`;
 export const ABOUT_TEXT_1 = `I've come to realize that learning is not just about acquiring new skills; it's also about shaping who I am. Learning new ideas, tools, mindsets, and subjects gives me the framework on how to think and express my insights based on different perspectives.`;
-export const ABOUT_TEXT_2 = `My expertise spans web and mobile app development, but my heart beats for machine learning and artificial intelligence. I've delved into natural language processing, computer vision, time-series forecasting, and optimization projects, working with algorithms such as CNNs, LSTMs, Transformers, BERT, YOLO, MobileNet, PPO, and more. Currently, I'm focused on a novel approach of implementing sequence-to-sequence (Seq2Seq) model and Deep Reinforcement Learning (DRL) for optimizing irrigation scheduling.`;
+export const ABOUT_TEXT_2 = `My expertise spans web and mobile app development, but my heart beats for machine learning and artificial intelligence. I've delved into natural language processing, computer vision, time-series forecasting, and optimization projects, working with algorithms such as CNNs, LSTMs, Transformers, BERT, YOLO, MobileNet, PPO, and more. I recently have proposed a novel approach of implementing sequence-to-sequence (Seq2Seq) model and Deep Reinforcement Learning (DRL) for optimizing irrigation scheduling.`;
 export const ABOUT_TEXT_3 = `When I'm not immersed in tech, I enjoy capturing the essence of life through street photography and staying active with a game of badminton.`;
 
 export const EXPERIENCES = [
@@ -39,12 +39,14 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
 	{
-		title: "Deep Reinforcement Learning for Irrigation Scheduling",
+		title: "Optimising Irrigation Decisions with Seq2Seq Modeling and Deep Reinforcement Learning",
 		image: irr,
 		description:
-			"This project leverages Proximal Policy Optimization (PPO) to optimize irrigation scheduling by incorporating advanced soil moisture modeling techniques. Models like Seq2Seq, LSTM, LSTM-CNN, and more were used and evaluated for accurate soil moisture prediction, while various novel DRL reward structures were designed and evaluated to reduce water usage and balance soil moisture levels. The best reward design reduced water consumption by 50.8%, offering an efficient irrigation strategy to enhance crop health and minimize resource use.",
+			"This project leverages Proximal Policy Optimization (PPO) to optimize irrigation scheduling by incorporating advanced soil moisture modeling techniques. Models like Seq2Seq, LSTM, LSTM-CNN, and more were used and evaluated for accurate soil moisture prediction, while various novel DRL reward structures were designed and evaluated to reduce water usage and balance soil moisture levels. The best reward design reduced water consumption by 50.8%, offering an efficient irrigation strategy to enhance crop health and minimize resource use. This work is currently under reviewed for publication in the Computers and Electronics in Agriculture journal.",
 		technologies: ["PyTorch", "RL", "Gymnasium", "PPO", "Ray Tune"],
-		links: {},
+		links: {
+			"Manuscript": "https://drive.google.com/file/d/125b5mVaaprSaLOQ-SjoHjSwJE8yUeCm4/view?usp=sharing"
+		},
 		tag: ["ai"],
 	},
 	{
